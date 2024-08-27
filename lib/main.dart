@@ -1,20 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_upload_file_new/core/route/app_route.dart';
+import 'package:flutter_upload_file_new/core/theme/app_theme.dart';
+import 'package:flutter_upload_file_new/main_module.dart';
 
-void main() {
-  runApp(const MainApp());
+/// Follow me on
+/// Youtube : Dannndi
+/// IG : dannndi.ig
+/// Tiktok : dannndi.tt
+///
+/// Like & Subscribe
+
+void main() async {
+  MainModule.init();
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      routerConfig: AppRoute.router,
+      title: "Flutter Upload File",
+      theme: AppTheme.light,
+      darkTheme: AppTheme.dark,
+      themeMode: ThemeMode.light,
     );
   }
 }
