@@ -3,13 +3,6 @@ import 'package:flutter_upload_file_new/core/route/app_route.dart';
 import 'package:flutter_upload_file_new/core/theme/app_theme.dart';
 import 'package:flutter_upload_file_new/main_module.dart';
 
-/// Follow me on
-/// Youtube : Dannndi
-/// IG : dannndi.ig
-/// Tiktok : dannndi.tt
-///
-/// Like & Subscribe
-
 void main() async {
   MainModule.init();
   WidgetsFlutterBinding.ensureInitialized();
